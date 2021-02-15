@@ -1,1 +1,1 @@
-pub mod graph_utils;
+pub mod partition_graphs;
