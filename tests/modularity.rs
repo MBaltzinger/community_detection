@@ -1,5 +1,5 @@
 use petgraph::graph::UnGraph;
-use community_detection::partition_graphs::PartGraph;
+use community_detection::PartGraph;
 
 #[test]
 fn modularity() {

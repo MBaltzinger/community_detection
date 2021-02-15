@@ -1,7 +1,7 @@
 use petgraph::graph::NodeIndex;
 use petgraph::graph::UnGraph;
 use std::collections::HashMap;
-use crate::partition_graphs::graph_ext::GraphExt;
+use crate::utils::graph_ext::GraphExt;
 
 fn subgraph_mod(graph: &UnGraph<(), f32>, q: &mut f32, m: f32, list_nodes: &Vec<NodeIndex>) {
     let mut degree = HashMap::new();
@@ -31,7 +31,7 @@ fn subgraph_mod(graph: &UnGraph<(), f32>, q: &mut f32, m: f32, list_nodes: &Vec<
     }
 }
 
-impl super::PartGraph {
+impl super::super::PartGraph {
     
     pub fn modularity(&self) -> f32 {
         let m = 2. * self.graph.sum_weights();
